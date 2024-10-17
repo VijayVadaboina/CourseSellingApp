@@ -40,12 +40,11 @@ adminRouter.post("/signup", async function (req, res) {
 adminRouter.post("/signin", async function (req, res) {
   try {
     const { email, password } = req.body;
-    console.log("Incoming email:", email);
-    console.log("Incoming passwerd:", password);
 
     const adminUser = await adminModel.findOne({
       email: email,
     });
+    console.log(adminUser);
     if (!adminUser) {
       console.log(" no email is found ");
     }

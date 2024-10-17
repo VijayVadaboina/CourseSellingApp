@@ -16,7 +16,7 @@ app.use(express.static("public"));
 app.use(bodyParser.json());
 
 app.get("/", function (req, res) {
-  res.sendFile(__dirname + "/public/login.html");
+  res.sendFile(__dirname + "/public/landingPage.html");
 });
 app.use("/admin", adminRouter);
 app.use("/user", userRouter);
